@@ -1,0 +1,11 @@
+.show{
+    display: flex;
+}
+.hide{
+    display: none;
+}
+.stick{
+    position: fixed;
+    top: 10px;
+    z-index: 3;
+}

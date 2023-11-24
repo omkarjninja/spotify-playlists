@@ -1,24 +1,27 @@
 import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+  Routes
+} from 'react-router-dom';
 import './App.css';
+import Sticky from './components/header/banner';
+import First from './components/sections/first';
+import Playlists from './components/sections/playlist';
+import One from './components/mainpage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+   <Router>
+      <Routes>
+      <Route path='/' element={<One />} exact />
+      <Route path='/2' element={<Playlists />} exact />
+      </Routes>
+    </Router>
+    </>
   );
 }
 
